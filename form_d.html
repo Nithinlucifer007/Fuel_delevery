@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style_form.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key" value="ada7edf1-a77a-4c0a-a0f4-b16d03c0e9bb">
+        <input type="text" name="name" id="Enter your name" placeholder="Enter your Name"><br>
+        <input type="number" name="Number" id="" placeholder="Enter your number"><br>
+        <input type="number" name="Quantity" id="" placeholder="Quantity" maxlength="2"><br>
+        <select name="typr" id="">
+            <option value="Diesel">Diesel</option>
+        </select>
+        <input type="text" id="locationInput" name="location" placeholder="Your live location" readonly />
+        <br />
+        <input type="button" value="Get Live Location" onclick="getLocation()" />
+        <button type="submit" style="padding: 10px;" >Order Now</button>
+    </form>
+    <script>
+        // Function to get the user's live location
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Function to display the position in the input field
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var locationInput = document.getElementById("locationInput");
+            locationInput.value = "Latitude: " + latitude + ", Longitude: " + longitude;
+        }
+
+        // Function to handle errors while retrieving the location
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                default:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+
+       
+    </script>
+</body>
+</html>

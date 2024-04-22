@@ -1,0 +1,362 @@
+/* Stylesheet for dark theme */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #f5f5f5; /* Light text color */
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c1c1c; /* Darker background for header */
+}
+
+/* Logo */
+.logo img {
+    width: 150px; /* Adjust the logo size as needed */
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px; /* Space between navigation links */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f5f5f5; /* Light text color */
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #333; /* Hover effect */
+}
+.hero {
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('hero-background.webp'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(28, 28, 28, 0.7); /* Dark overlay with transparency */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.hero-headline {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-subheadline {
+    font-size: 1.2rem;
+    margin: 10px 0 20px 0;
+} 
+
+.cta-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6f00; /* Bright orange color */
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65b00; /* Darker orange on hover */
+}
+.services {
+    padding: 60px 20px; /* Padding for the section */
+    background-color: #1c1c1c; /* Darker background for services */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between service cards */
+}
+
+.service-card {
+    background-color: #2a2a2a; /* Card background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.service-icon img {
+    width: 50px; /* Adjust icon size as needed */
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.service-description {
+    font-size: 1rem;
+    margin: 0;
+}
+/* Benefits Section */
+.benefits {
+    padding: 60px 20px; /* Padding for the section */
+    background-color: #1c1c1c; /* Darker background for benefits */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.benefit-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between benefit cards */
+}
+
+.benefit-card {
+    background-color: #2a2a2a; /* Card background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.benefit-icon img {
+    width: 50px; /* Adjust icon size as needed */
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.benefit-description {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.pricing {
+    padding: 60px 20px; /* Padding for the section */
+    background-color: #1c1c1c; /* Darker background for pricing */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between pricing cards */
+}
+
+.pricing-card {
+    background-color: #2a2a2a; /* Card background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.pricing-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.pricing-price {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #ff6f00; /* Bright orange color */
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pricing-features li {
+    margin: 5px 0;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6f00; /* Bright orange color */
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65b00; /* Darker orange on hover */
+}
+
+.how-it-works {
+    padding: 60px 20px; /* Padding for the section */
+    background-color: #1c1c1c; /* Darker background for how it works */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between steps */
+}
+
+.step {
+    background-color: #2a2a2a; /* Card background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f00; /* Bright orange color */
+}
+
+.step-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.step-description {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.faqs {
+    padding: 60px 20px; /* Padding for the section */
+    background-color: #1c1c1c; /* Darker background for FAQs */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-list {
+    margin-top: 20px;
+}
+
+.faq-item {
+    background-color: #2a2a2a; /* Item background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between items */
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ff6f00; /* Bright orange color for question */
+}
+
+.faq-answer {
+    font-size: 1rem;
+    margin: 0;
+}

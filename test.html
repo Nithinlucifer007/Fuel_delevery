@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Live Location Submission</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Submit Your Live Location</h1>
+    <form id="locationForm">
+        <input type="text" id="locationInput" name="location" placeholder="Your live location" readonly />
+        <br />
+        <input type="button" value="Get Live Location" onclick="getLocation()" />
+        <br />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+        // Function to get the user's live location
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Function to display the position in the input field
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var locationInput = document.getElementById("locationInput");
+            locationInput.value = "Latitude: " + latitude + ", Longitude: " + longitude;
+        }
+
+        // Function to handle errors while retrieving the location
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                default:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+
+        // Handle the form submission
+        document.getElementById("locationForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var location = document.getElementById("locationInput").value;
+            if (location) {
+                alert("Submitted Location: " + location);
+                // Here you can add your code to submit the form data to your server or process it as needed
+            } else {
+                alert("Please get your live location first.");
+            }
+        });
+    </script>
+</body>
+
+</html>
